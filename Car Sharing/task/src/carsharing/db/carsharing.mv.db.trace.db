@@ -1,0 +1,765 @@
+2022-04-07 18:07:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS CUSTOMER\000d\000a                           (ID INTEGER AUTO_INCREMENT PRIMARY KEY, \000d\000a                              NAME VARCHAR_IGNORECASE UNIQUE NOT NULL,  \000d\000a                               RENTED_CAR_ID INTEGER , [*]"" +\000d\000a                    FOREIGN KEY (RENTED_CAR_ID) REFERENCES CAR(ID)\000d\000a                    );"; SQL statement:
+CREATE TABLE IF NOT EXISTS CUSTOMER
+                           (ID INTEGER AUTO_INCREMENT PRIMARY KEY, 
+                              NAME VARCHAR_IGNORECASE UNIQUE NOT NULL,  
+                               RENTED_CAR_ID INTEGER , " +
+                    FOREIGN KEY (RENTED_CAR_ID) REFERENCES CAR(ID)
+                    ); [42000-206]
+2022-04-07 18:08:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO COMPANY (NAME) VALUES ("IBM","GOOGLE") [21002-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:521)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.message.DbException.get(DbException.java:192)
+	at org.h2.command.dml.Insert.prepare(Insert.java:295)
+	at org.h2.command.Parser.prepareCommand(Parser.java:971)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:08:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "IBM" not found; SQL statement:
+INSERT INTO COMPANY (NAME) VALUES ("IBM") [42122-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:521)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:248)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:230)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.dml.Insert.prepare(Insert.java:300)
+	at org.h2.command.Parser.prepareCommand(Parser.java:971)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:08:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "IBM" not found; SQL statement:
+INSERT INTO COMPANY (NAME) VALUES "IBM" [42122-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:521)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:248)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:230)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.dml.Insert.prepare(Insert.java:300)
+	at org.h2.command.Parser.prepareCommand(Parser.java:971)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:08:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "IBM" not found; SQL statement:
+INSERT INTO COMPANY (NAME) VALUES IBM [42122-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:521)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:248)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:230)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.dml.Insert.prepare(Insert.java:300)
+	at org.h2.command.Parser.prepareCommand(Parser.java:971)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:08:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "IBM" not found; SQL statement:
+INSERT INTO COMPANY (NAME) VALUES (IBM) [42122-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:521)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:248)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:230)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.dml.Insert.prepare(Insert.java:300)
+	at org.h2.command.Parser.prepareCommand(Parser.java:971)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:09:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO COMPANY (NAME) VALUES ('GOOGLE','TWITTER') [21002-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:521)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.message.DbException.get(DbException.java:192)
+	at org.h2.command.dml.Insert.prepare(Insert.java:295)
+	at org.h2.command.Parser.prepareCommand(Parser.java:971)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:09:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO COMPANY (NAME) VALUES ('GOOGLE'[*]"; expected "], :=, AT, FORMAT, ,, %, ;, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, ., )"; SQL statement:
+INSERT INTO COMPANY (NAME) VALUES ('GOOGLE' [42001-206]
+2022-04-07 18:09:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "'TWITTER'[*])"; SQL statement:
+'TWITTER') [42000-206]
+2022-04-07 18:09:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO COMPANY (NAME) VALUES ('GOOGLE' , 'TWITTER') [21002-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:521)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.message.DbException.get(DbException.java:192)
+	at org.h2.command.dml.Insert.prepare(Insert.java:295)
+	at org.h2.command.Parser.prepareCommand(Parser.java:971)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:13:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CAR \000d\000a                    WHERE COMPANY_ID = (SELECT ID FROM COMPANY WHERE NAME = (?))\000d\000a                    JOIN[*] CUSTOMER AS CUST\000d\000a                    ON CUST.RENTED_CAR_ID = CAR.ID\000d\000a                    WHERE CAR.ID = NULL"; SQL statement:
+SELECT * FROM CAR 
+                    WHERE COMPANY_ID = (SELECT ID FROM COMPANY WHERE NAME = (?))
+                    JOIN CUSTOMER AS CUST
+                    ON CUST.RENTED_CAR_ID = CAR.ID
+                    WHERE CAR.ID = NULL [42000-206]
+2022-04-07 18:13:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CAR AS C\000d\000a                    WHERE COMPANY_ID = (SELECT ID FROM COMPANY WHERE NAME = (?))\000d\000a                    JOIN[*] CUSTOMER AS CUST\000d\000a                    ON CUST.RENTED_CAR_ID = C.ID\000d\000a                    WHERE C.ID = NULL"; SQL statement:
+SELECT * FROM CAR AS C
+                    WHERE COMPANY_ID = (SELECT ID FROM COMPANY WHERE NAME = (?))
+                    JOIN CUSTOMER AS CUST
+                    ON CUST.RENTED_CAR_ID = C.ID
+                    WHERE C.ID = NULL [42000-206]
+2022-04-07 18:13:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CAR AS C\000d\000a                    WHERE COMPANY_ID = (SELECT ID FROM COMPANY WHERE NAME = (?))\000d\000a                    JOIN[*] CUSTOMER AS CUST\000d\000a                    ON CUST.RENTED_CAR_ID = C.ID"; SQL statement:
+SELECT * FROM CAR AS C
+                    WHERE COMPANY_ID = (SELECT ID FROM COMPANY WHERE NAME = (?))
+                    JOIN CUSTOMER AS CUST
+                    ON CUST.RENTED_CAR_ID = C.ID [42000-206]
+2022-04-07 18:16:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CAR AS C\000d\000a                    WHERE COMPANY_ID = (SELECT ID FROM COMPANY WHERE NAME = (?))\000d\000a                    JOIN[*] CUSTOMER AS CUST\000d\000a                    ON (CUST.RENTED_CAR_ID = C.ID)"; SQL statement:
+SELECT * FROM CAR AS C
+                    WHERE COMPANY_ID = (SELECT ID FROM COMPANY WHERE NAME = (?))
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = C.ID) [42000-206]
+2022-04-07 18:16:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CAR AS C\000d\000a                    WHERE COMPANY_ID = (SELECT ID FROM COMPANY WHERE NAME = (?))\000d\000a                    JOIN[*] CUSTOMER AS CUST\000d\000a                    ON (CUST.RENTED_CAR_ID = C.ID)"; SQL statement:
+SELECT * FROM CAR AS C
+                    WHERE COMPANY_ID = (SELECT ID FROM COMPANY WHERE NAME = (?))
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = C.ID) [42000-206]
+2022-04-07 18:17:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CAR AS C\000d\000a                    WHERE COMPANY_ID = (SELECT ID FROM COMPANY WHERE NAME = 'GOOGLE')\000d\000a                    JOIN[*] CUSTOMER AS CUST\000d\000a                    ON (CUST.RENTED_CAR_ID = C.ID)"; SQL statement:
+SELECT * FROM CAR AS C
+                    WHERE COMPANY_ID = (SELECT ID FROM COMPANY WHERE NAME = 'GOOGLE')
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = C.ID) [42000-206]
+2022-04-07 18:17:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CAR AS C\000d\000a                    WHERE COMPANY_ID = 2\000d\000a                    JOIN[*] CUSTOMER AS CUST\000d\000a                    ON (CUST.RENTED_CAR_ID = C.ID)"; SQL statement:
+SELECT * FROM CAR AS C
+                    WHERE COMPANY_ID = 2
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = C.ID) [42000-206]
+2022-04-07 18:37:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CAR \000d\000a                    JOIN CUSTOMER AS CUST\000d\000a                    ON (CUST.RENTED_CAR_ID = CAR.ID)\000d\000a                    WHERE COMPANY_ID = 1 AS[*] 'NOTAVAILABLE'"; SQL statement:
+SELECT * FROM CAR 
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID)
+                    WHERE COMPANY_ID = 1 AS 'NOTAVAILABLE' [42000-206]
+2022-04-07 18:37:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CAR AS 'NOTAVAILABLE'\000d\000a                    [*]JOIN CUSTOMER AS CUST\000d\000a                    ON (CUST.RENTED_CAR_ID = CAR.ID)\000d\000a                    WHERE COMPANY_ID = 1"; expected "identifier"; SQL statement:
+SELECT * FROM CAR AS 'NOTAVAILABLE'
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID)
+                    WHERE COMPANY_ID = 1 [42001-206]
+2022-04-07 18:37:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CAR \000d\000a                    JOIN CUSTOMER AS CUST\000d\000a                    ON (CUST.RENTED_CAR_ID = CAR.ID) AS[*] 'NOTAVAILABLE'\000d\000a                    WHERE COMPANY_ID = 1"; SQL statement:
+SELECT * FROM CAR 
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) AS 'NOTAVAILABLE'
+                    WHERE COMPANY_ID = 1 [42000-206]
+2022-04-07 18:38:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Duplicate column name "ID"; SQL statement:
+SELECT ID,NAME FROM (
+
+SELECT * FROM CAR 
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID != CAR.ID) 
+                    WHERE COMPANY_ID = 1) [42121-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:521)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.table.Table.setColumns(Table.java:478)
+	at org.h2.table.TableView.initColumnsAndTables(TableView.java:215)
+	at org.h2.table.TableView.init(TableView.java:106)
+	at org.h2.table.TableView.<init>(TableView.java:68)
+	at org.h2.table.TableView.createTempView(TableView.java:506)
+	at org.h2.command.query.Query.toTable(Query.java:986)
+	at org.h2.command.Parser.readQueryTableFilter(Parser.java:2249)
+	at org.h2.command.Parser.readTableFilter(Parser.java:2127)
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:3102)
+	at org.h2.command.Parser.parseSelect(Parser.java:3220)
+	at org.h2.command.Parser.parseQuerySub(Parser.java:3092)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2930)
+	at org.h2.command.Parser.parseQuery(Parser.java:2900)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1101)
+	at org.h2.command.Parser.parse(Parser.java:1068)
+	at org.h2.command.Parser.parse(Parser.java:1037)
+	at org.h2.command.Parser.prepareCommand(Parser.java:965)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:38:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Duplicate column name "ID"; SQL statement:
+SELECT ID,NAME FROM (
+
+SELECT * FROM CAR 
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) 
+                    WHERE COMPANY_ID = 1) [42121-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:521)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.table.Table.setColumns(Table.java:478)
+	at org.h2.table.TableView.initColumnsAndTables(TableView.java:215)
+	at org.h2.table.TableView.init(TableView.java:106)
+	at org.h2.table.TableView.<init>(TableView.java:68)
+	at org.h2.table.TableView.createTempView(TableView.java:506)
+	at org.h2.command.query.Query.toTable(Query.java:986)
+	at org.h2.command.Parser.readQueryTableFilter(Parser.java:2249)
+	at org.h2.command.Parser.readTableFilter(Parser.java:2127)
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:3102)
+	at org.h2.command.Parser.parseSelect(Parser.java:3220)
+	at org.h2.command.Parser.parseQuerySub(Parser.java:3092)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2930)
+	at org.h2.command.Parser.parseQuery(Parser.java:2900)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1101)
+	at org.h2.command.Parser.parse(Parser.java:1068)
+	at org.h2.command.Parser.parse(Parser.java:1037)
+	at org.h2.command.Parser.prepareCommand(Parser.java:965)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:38:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT ID,NAME FROM (\000d\000a\000d\000aSELECT * FROM CAR \000d\000a                    JOIN CUSTOMER AS CUST\000d\000a                    ON (CUST.RENTED_CAR_ID = CAR.ID) \000d\000a                    WHERE COMPANY_ID = 1[*]"; expected "], :=, AT, FORMAT, ,, %, ;, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, _LOCAL_AND_GLOBAL_, OR, GROUP, HAVING, WINDOW, QUALIFY, UNION, EXCEPT, MINUS, INTERSECT, ORDER, OFFSET, FETCH, LIMIT, FOR, )"; SQL statement:
+SELECT ID,NAME FROM (
+
+SELECT * FROM CAR 
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) 
+                    WHERE COMPANY_ID = 1 [42001-206]
+2022-04-07 18:38:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement ")[*]"; SQL statement:
+) [42000-206]
+2022-04-07 18:38:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Duplicate column name "ID"; SQL statement:
+SELECT ID,NAME FROM (
+
+SELECT * FROM CAR 
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) 
+                    WHERE COMPANY_ID = 1
+) [42121-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:521)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.table.Table.setColumns(Table.java:478)
+	at org.h2.table.TableView.initColumnsAndTables(TableView.java:215)
+	at org.h2.table.TableView.init(TableView.java:106)
+	at org.h2.table.TableView.<init>(TableView.java:68)
+	at org.h2.table.TableView.createTempView(TableView.java:506)
+	at org.h2.command.query.Query.toTable(Query.java:986)
+	at org.h2.command.Parser.readQueryTableFilter(Parser.java:2249)
+	at org.h2.command.Parser.readTableFilter(Parser.java:2127)
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:3102)
+	at org.h2.command.Parser.parseSelect(Parser.java:3220)
+	at org.h2.command.Parser.parseQuerySub(Parser.java:3092)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2930)
+	at org.h2.command.Parser.parseQuery(Parser.java:2900)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1101)
+	at org.h2.command.Parser.parse(Parser.java:1068)
+	at org.h2.command.Parser.parse(Parser.java:1037)
+	at org.h2.command.Parser.prepareCommand(Parser.java:965)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:40:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Duplicate column name "ID"; SQL statement:
+SELECT CAR.ID,NAME FROM (
+
+SELECT * FROM CAR 
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) 
+                    WHERE COMPANY_ID = 1
+) [42121-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:521)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.table.Table.setColumns(Table.java:478)
+	at org.h2.table.TableView.initColumnsAndTables(TableView.java:215)
+	at org.h2.table.TableView.init(TableView.java:106)
+	at org.h2.table.TableView.<init>(TableView.java:68)
+	at org.h2.table.TableView.createTempView(TableView.java:506)
+	at org.h2.command.query.Query.toTable(Query.java:986)
+	at org.h2.command.Parser.readQueryTableFilter(Parser.java:2249)
+	at org.h2.command.Parser.readTableFilter(Parser.java:2127)
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:3102)
+	at org.h2.command.Parser.parseSelect(Parser.java:3220)
+	at org.h2.command.Parser.parseQuerySub(Parser.java:3092)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2930)
+	at org.h2.command.Parser.parseQuery(Parser.java:2900)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1101)
+	at org.h2.command.Parser.parse(Parser.java:1068)
+	at org.h2.command.Parser.parse(Parser.java:1037)
+	at org.h2.command.Parser.prepareCommand(Parser.java:965)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:43:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Ambiguous column name "ID"; SQL statement:
+SELECT ID,NAME  FROM (
+
+SELECT CAR.ID,CAR.NAME FROM CAR 
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) 
+                    WHERE COMPANY_ID = 1
+) 
+OUTER JOIN CAR as C
+ON (CAR.ID =C.ID) [90059-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:651)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:197)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:175)
+	at org.h2.command.query.Select.mapColumns(Select.java:1546)
+	at org.h2.command.query.Select.init(Select.java:1100)
+	at org.h2.command.Parser.parseQuery(Parser.java:2907)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1101)
+	at org.h2.command.Parser.parse(Parser.java:1068)
+	at org.h2.command.Parser.parse(Parser.java:1037)
+	at org.h2.command.Parser.prepareCommand(Parser.java:965)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:43:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Ambiguous column name "ID"; SQL statement:
+SELECT ID,NAME  FROM (
+
+SELECT CAR.ID,CAR.NAME FROM CAR 
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) 
+                    WHERE COMPANY_ID = 1
+) 
+OUTER JOIN CAR AS C
+ON (CAR.ID =C.ID) [90059-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:651)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:197)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:175)
+	at org.h2.command.query.Select.mapColumns(Select.java:1546)
+	at org.h2.command.query.Select.init(Select.java:1100)
+	at org.h2.command.Parser.parseQuery(Parser.java:2907)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1101)
+	at org.h2.command.Parser.parse(Parser.java:1068)
+	at org.h2.command.Parser.parse(Parser.java:1037)
+	at org.h2.command.Parser.prepareCommand(Parser.java:965)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:44:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Ambiguous column name "ID"; SQL statement:
+SELECT ID AS IDI,NAME  FROM (
+
+SELECT CAR.ID,CAR.NAME FROM CAR 
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) 
+                    WHERE COMPANY_ID = 1
+) 
+OUTER JOIN CAR AS C
+ON (IDI =C.ID) [90059-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:651)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:197)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:175)
+	at org.h2.expression.Alias.mapColumns(Alias.java:47)
+	at org.h2.command.query.Select.mapColumns(Select.java:1546)
+	at org.h2.command.query.Select.init(Select.java:1100)
+	at org.h2.command.Parser.parseQuery(Parser.java:2907)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1101)
+	at org.h2.command.Parser.parse(Parser.java:1068)
+	at org.h2.command.Parser.parse(Parser.java:1037)
+	at org.h2.command.Parser.prepareCommand(Parser.java:965)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:44:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Ambiguous column name "ID"; SQL statement:
+SELECT ID AS IDI,NAME  FROM (
+
+SELECT CAR.ID,CAR.NAME FROM CAR 
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) 
+                    WHERE COMPANY_ID = 1
+) 
+OUTER JOIN CAR
+ON (IDI =CAR.ID) [90059-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:651)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:197)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:175)
+	at org.h2.expression.Alias.mapColumns(Alias.java:47)
+	at org.h2.command.query.Select.mapColumns(Select.java:1546)
+	at org.h2.command.query.Select.init(Select.java:1100)
+	at org.h2.command.Parser.parseQuery(Parser.java:2907)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1101)
+	at org.h2.command.Parser.parse(Parser.java:1068)
+	at org.h2.command.Parser.parse(Parser.java:1037)
+	at org.h2.command.Parser.prepareCommand(Parser.java:965)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:45:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "CAR.ID" not found; SQL statement:
+SELECT CAR.ID,CAR.NAME FROM CAR 
+                    OUTER JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) 
+                    WHERE COMPANY_ID = 1 [42122-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:521)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:248)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:230)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.query.Select.prepare(Select.java:1177)
+	at org.h2.command.Parser.prepareCommand(Parser.java:971)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:46:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "CAR.ID" not found; SQL statement:
+SELECT CAR.ID,CAR.NAME FROM CAR 
+                    OUTER JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) 
+                    WHERE COMPANY_ID = 1 [42122-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:521)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:248)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:230)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.query.Select.prepare(Select.java:1177)
+	at org.h2.command.Parser.prepareCommand(Parser.java:971)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:46:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Ambiguous column name "ID"; SQL statement:
+SELECT ID,NAME FROM CAR 
+                    OUTER JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) 
+                    WHERE COMPANY_ID = 1 [90059-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:651)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:197)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:175)
+	at org.h2.command.query.Select.mapColumns(Select.java:1546)
+	at org.h2.command.query.Select.init(Select.java:1100)
+	at org.h2.command.Parser.parseQuery(Parser.java:2907)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1101)
+	at org.h2.command.Parser.parse(Parser.java:1068)
+	at org.h2.command.Parser.parse(Parser.java:1037)
+	at org.h2.command.Parser.prepareCommand(Parser.java:965)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:46:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Ambiguous column name "ID"; SQL statement:
+SELECT ID,NAME FROM CAR 
+                    OUTER JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) 
+                    WHERE COMPANY_ID = 1 [90059-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:651)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:197)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:175)
+	at org.h2.command.query.Select.mapColumns(Select.java:1546)
+	at org.h2.command.query.Select.init(Select.java:1100)
+	at org.h2.command.Parser.parseQuery(Parser.java:2907)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1101)
+	at org.h2.command.Parser.parse(Parser.java:1068)
+	at org.h2.command.Parser.parse(Parser.java:1037)
+	at org.h2.command.Parser.prepareCommand(Parser.java:965)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:46:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "CAR.ID" not found; SQL statement:
+SELECT * FROM CAR 
+                    OUTER JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) 
+                    WHERE COMPANY_ID = 1 [42122-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:521)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:248)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:230)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:140)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:137)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:147)
+	at org.h2.command.query.Select.prepare(Select.java:1184)
+	at org.h2.command.Parser.prepareCommand(Parser.java:971)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:48:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Ambiguous column name "ID"; SQL statement:
+SELECT ID,NAME FROM CAR 
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) 
+                    WHERE COMPANY_ID = 1 [90059-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:651)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:197)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:175)
+	at org.h2.command.query.Select.mapColumns(Select.java:1546)
+	at org.h2.command.query.Select.init(Select.java:1100)
+	at org.h2.command.Parser.parseQuery(Parser.java:2907)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1101)
+	at org.h2.command.Parser.parse(Parser.java:1068)
+	at org.h2.command.Parser.parse(Parser.java:1037)
+	at org.h2.command.Parser.prepareCommand(Parser.java:965)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-04-07 18:49:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "CAR.COMPANY.ID" not found; SQL statement:
+SELECT CAR.ID,CAR.NAME,CAR.COMPANY.ID FROM CAR 
+                    JOIN CUSTOMER AS CUST
+                    ON (CUST.RENTED_CAR_ID = CAR.ID) 
+                    WHERE COMPANY_ID = 1 [42122-206]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:521)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:496)
+	at org.h2.message.DbException.get(DbException.java:227)
+	at org.h2.message.DbException.get(DbException.java:203)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:248)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:230)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.query.Select.prepare(Select.java:1177)
+	at org.h2.command.Parser.prepareCommand(Parser.java:971)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:624)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:562)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1111)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1335)
+	at org.h2.server.web.WebApp.query(WebApp.java:1133)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1099)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1086)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:832)
